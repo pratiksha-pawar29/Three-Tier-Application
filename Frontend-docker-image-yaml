@@ -12,9 +12,15 @@ jobs:
 
       - name: Build images
         run: |
-          docker build frontend -t ${{ secrets.DOCKER_HUB_USERNAME }}/fctp-docker-project-frontend:latest
+          docker build frontend -t $
+{{ secrets.DOCKER_HUB_USERNAME }}/
+fctp-docker-project-frontend:latest
 
       - name: Push images to Docker Hub
         run: |
-          docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/fctp-docker-project-frontend:latest
+          docker login -u $
+{{ secrets.DOCKER_HUB_USERNAME }} -p $
+{{ secrets.DOCKER_HUB_TOKEN }}
+          docker push $
+{{ secrets.DOCKER_HUB_USERNAME }} 
+/fctp-docker-project-frontend:latest
